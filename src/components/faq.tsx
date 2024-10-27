@@ -9,39 +9,55 @@ import {
 
 const faqData = [
     {
-    question: 'How are legal fees structured at Harrison & Mitchell LLP?',
-    answer: 'Our fee structure varies depending on the type of case.'  // Note: removed comment, added complete string
+      question: "What should I bring to my initial consultation?",
+      answer: "Bring any relevant documents related to your case, including contracts, court papers, and identification."
     },
     {
-        question: 'How are legal fees structured at Harrison & Mitchell LLP?',
-        answer: 'Our fee structure varies depending on the type of case...'  // Make sure there's a comma here
+      question: "How are legal fees structured at Harrison & Mitchell LLP?",
+      answer: "We offer various fee structures depending on the case type, including contingency fees, flat rates, and hourly billing. We discuss all options during your consultation."
     },
     {
-        question: 'How long does it take to resolve a family law case?',
-        answer: 'The duration varies significantly based on the complexity of the case and whether it can be resolved through negotiation or requires court intervention. Simple, uncontested matters might take a few months, while complex cases could take a year or longer.'
+      question: "How long does it take to resolve a family law case?",
+      answer: "The duration varies based on the complexity of the case. On average, uncontested cases may take a few months, while contested cases could extend over a year."
     },
-]
-
-export function FAQ() {
-  return (
-    <section id="faq" className="bg-gray-50 py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center text-primary">Frequently Asked Questions</h2>
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
-            {faqData.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left">
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent>
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+    {
+      question: "Do you offer virtual consultations?",
+      answer: "Yes, we offer secure video consultations for clients who prefer remote meetings or are unable to visit our office in person."
+    }
+  ]
+  
+  export function FAQ() {
+    return (
+      <section id="faq" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container max-w-5xl mx-auto px-4">
+          <div className="space-y-4 text-center mb-16">
+            <h2 className="text-4xl font-bold tracking-tight">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Common questions about our services and legal processes
+            </p>
+          </div>
+          
+          <div className="mx-auto">
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              {faqData.map((item, index) => (
+                <AccordionItem 
+                  key={index} 
+                  value={`item-${index}`}
+                  className="border rounded-lg px-6 shadow-sm"
+                >
+                  <AccordionTrigger className="text-left text-lg font-medium py-6 hover:no-underline">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-muted-foreground pb-6">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
-      </div>
-    </section>
-  )
-}
+      </section>
+    )
+  }
