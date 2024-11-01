@@ -2,7 +2,8 @@
 
 import * as motion from "framer-motion/client"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Star, StarHalf } from 'lucide-react'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { ArrowRight, StarHalf } from 'lucide-react'
 import Image from "next/image"
 
 export default function Hero() {
@@ -67,7 +68,7 @@ export default function Hero() {
             >
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star
+                  <StarHalf
                     key={i}
                     className="w-4 sm:w-5 h-4 sm:h-5 fill-yellow-400 text-yellow-400"
                   />

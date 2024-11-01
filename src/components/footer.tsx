@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input"
 import { Facebook, Linkedin, Twitter, Instagram } from 'lucide-react'
 
 export default function Footer() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
     e.preventDefault()
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
