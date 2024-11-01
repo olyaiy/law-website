@@ -39,12 +39,13 @@ export default function Hero() {
               <div className="aspect-[16/9] lg:aspect-square max-w-[400px] lg:max-w-[600px] mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl rotate-6" />
                 <Image
-                  src="/placeholder.jpg"
+                  src="/law-hero.jpg"
                   alt="Law Office"
                   fill
                   priority
                   className="rounded-2xl shadow-2xl object-cover hover:scale-[1.02] transition-transform duration-300"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+                  sizes="(max-width: 640px) 400px, (max-width: 1024px) 600px, 800px"
+                  quality={90}
                 />
               </div>
             </div>
