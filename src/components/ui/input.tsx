@@ -7,6 +7,7 @@ export interface InputProps
   // Add any custom props here if needed in the future
   wrapperClassName?: string;
 }
+
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
     return (
